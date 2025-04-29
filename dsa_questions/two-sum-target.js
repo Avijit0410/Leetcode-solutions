@@ -34,7 +34,26 @@ function twoSum(arr, target){
     }
 }
 
-// console.log( twoSum(nums, target) )
+
+function twosum1( arr, target){
+    let left = 0
+
+    while ( left < arr.length ){
+
+        let right = arr.length - 1
+
+        while( left < right ){
+            if( arr[left] + arr[right] === target ){
+                return [arr[left], arr[right] ]
+            }
+            right--
+        }
+
+        left++
+    }
+}
+
+// console.log( twosum1(nums, target) )
 
 
 
@@ -55,4 +74,18 @@ function twoSum_hash(nums, target) {
     }
 }
 
-console.log( twoSum_hash(nums, target) )
+function twosum_hash1(arr, target){
+    let obj = {}
+
+    for( let i=0; i <arr.length; i++){
+
+        let rem = target - arr[i]
+        if( obj[rem] !== undefined ){
+            return [arr[obj[rem]], arr[i]]
+        }
+
+        obj[arr[i]] = i
+    }
+}
+
+console.log( twosum_hash1(nums, target) )

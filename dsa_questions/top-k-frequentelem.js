@@ -20,7 +20,9 @@ function topFrequentElem(nums, target){
     // [[1, 3], [2,2]]
     let sorted = Object.entries(obj).sort((a, b) => b[1] - a[1])
     
-    return sorted.slice(0, k).map(([item]) => item ) // inside object all keys are bedefault string, so in prefix +sign changes it into number
+    return sorted.slice(0, k).map(([item]) => item ) // inside object all keys are bydefault string, so in prefix +sign changes it into number
 }
 
 console.log( topFrequentElem(nums, k) )
+
+
