@@ -25,4 +25,3 @@ function topFrequentElem(nums, target){
 
 console.log( topFrequentElem(nums, k) )
 
-
